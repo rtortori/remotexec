@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block title %} remotexec - We are sorry :( {%
+endblock title %} {% block content %}
+<div class="container">
+  <div class="row text-center">
+    <div class="container">
+      <br /><br />
+      <p class="display-2">Something's wrong.</p>
+      <p style="font-size:20px;color:rgb(199, 14, 14);">
+        A problem occurred: <br>Is your K8S master node SSH reachable? <br>Check if the
+        username is correct, if the user can launch kubectl and your SSH
+        private key.
+      </p>
+      <ul>
+        {% for node in nodes %}
+        <p class="lead">{{ node }}</p>
+        {% endfor %}
+      </ul>
+      <a href="{{ url_for('form') }}" class="btn btn-success">Back Home</a>
+      <br /><br />
+    </div>
+  </div>
+</div>
+{% endblock content %}

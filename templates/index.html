@@ -1,0 +1,60 @@
+{% import "bootstrap/wtf.html" as wtf %} 
+{% extends 'base.html' %} 
+
+{% block title %}
+remotexec {% endblock title %} 
+{% block content%} 
+
+{% if service_unavailable %}
+<br />
+<br />
+<br />
+<div class="container text-center">
+  <h1 class="display-4 text-muted">
+    We are sorry <i class="far fa-sad-tear"></i> <br />
+    The service is not available at the moment
+  </h1>
+</div>
+<br />
+
+{% else %}
+
+<div class="container col">
+  <br />
+  <div class="col">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">remotexec</h1>
+        <p class="lead">
+          Starting from a Kubernetes master node, it will execute a shell script
+          on all Kubernetes nodes
+        </p>
+      </div>
+    </div>
+    <hr />
+  </div>
+  <div class="col">
+    <form action="" method="post" role="form">
+      {{ form.hidden_tag() }}
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          {{ wtf.form_field(form.k8s_master) }}
+        </div>
+        <div class="form-group col-md-6">
+          {{ wtf.form_field(form.master_user) }}
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          {{ wtf.form_field(form.nodes_sshkey) }}
+        </div>
+      </div>
+      <div class="form-group">
+        {{ wtf.form_field(form.code) }}
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>
+
+{% endif %} {% endblock %}
