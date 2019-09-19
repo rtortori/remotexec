@@ -38,10 +38,10 @@ A frequent use case is to configure the docker daemon to use an HTTP proxy, with
 
 #### Screeshots
 Script Injection<br>
-![alt text](https://gitlab-sjc.cisco.com/rtortori/remotexec/raw/master/screenshots/remotexec1.png "Script Injection")
+![alt text](https://raw.githubusercontent.com/rtortori/remotexec/master/screenshots/remotexec1.png "Script Injection")
 <br>
 Success<br>
-![alt text](https://gitlab-sjc.cisco.com/rtortori/remotexec/raw/master/screenshots/remotexec2.png "Success")
+![alt text](https://raw.githubusercontent.com/rtortori/remotexec/master/screenshots/remotexec2.png "Success")
 <br>
 Fail<br>
-![alt text](https://gitlab-sjc.cisco.com/rtortori/remotexec/raw/master/screenshots/remotexec3.png "Fail")
+![alt text](https://raw.githubusercontent.com/rtortori/remotexec/master/screenshots/remotexec3.png "Fail")
